@@ -1,7 +1,14 @@
 const prompt = require('prompt-sync')();
 
 function playerMove(p1, p2, rounds){
+    
+    do{
     rounds = prompt("How many round would you like to play?")
+    rounds = parseInt(rounds)
+    } while(Number.isInteger(rounds) == false || rounds == 0)
+
+       
+        
     let playerOneScore = 0
     let playerTwoScore = 0
 
@@ -20,7 +27,6 @@ function playerMove(p1, p2, rounds){
             console.log('player 2 wins!')
             playerTwoScore++
     }
-        
         rounds--
     }
 
