@@ -12,9 +12,19 @@ function playerMove(p1, p2, rounds){
     let playerOneScore = 0
     let playerTwoScore = 0
 
+    console.log('-------------------------------------')
+    console.log(`Pleas enter rock, paper or scissors:`);
+    console.log('--------------------------------------');
+
     while(rounds > 0){
-        p1 = prompt('Enter Player 1 move: ')
-        p2 = prompt("Enter player 2 move: ")
+
+        do{
+            p1 = prompt('Enter Player 1 move: ')
+        } while(p1 !== 'rock' && p1 !== 'paper' && p1 !== 'scissors')
+
+        do{
+            p2 = prompt('Enter Player 2 move: ')
+         } while(p2 !== 'rock' && p2 !== 'paper' && p2 !== 'scissors')
 
         if(p1 == p2){
             console.log('Draw!')
