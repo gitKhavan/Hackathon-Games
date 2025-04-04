@@ -6,7 +6,6 @@ function rollDice(){
         answer = prompt("Would you like to roll the dice? y/n ")
     } while(answer !== 'y' && answer !== 'n')
 
-    
     const rndInt = Math.floor(Math.random() * 6) + 1
 
     if(answer == 'y'){
@@ -14,7 +13,5 @@ function rollDice(){
     } else {
         console.log('Bye!');
     }
-    
 }
-
 rollDice()
